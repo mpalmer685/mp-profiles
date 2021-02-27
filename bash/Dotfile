@@ -1,0 +1,8 @@
+shell :bash do
+  source 'lib/colors.sh'
+  source 'lib/directories.sh'
+  source 'lib/git.sh'
+
+  source 'completion.sh'
+  source 'functions.sh'
+end
