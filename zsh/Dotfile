@@ -1,0 +1,5 @@
+shell :zsh do
+  source 'antigen.sh'
+
+  fpath_add 'functions'
+end

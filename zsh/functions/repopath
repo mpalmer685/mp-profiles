@@ -1,0 +1,4 @@
+function repopath {
+    local repoBase=${REPO_BASE:-"$HOME/repos"}
+    find "$repoBase" -mindepth 1 -maxdepth 2 -type d -iname "*$1*" | head -n 1
+}

@@ -1,0 +1,5 @@
+#compdef repo
+for collection in $REPO_BASE/*(/)
+do
+    _files -W "$collection" -/
+done

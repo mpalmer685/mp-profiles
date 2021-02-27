@@ -1,0 +1,11 @@
+# Move quickly into a project repo
+function repo() {
+    local repoBase=${REPO_BASE:-"$HOME/repos"}
+
+    if [[ -z $1 ]]
+    then
+        cd "$repoBase" || return
+    else
+        cd "$(repopath $1)" || return
+    fi
+}
