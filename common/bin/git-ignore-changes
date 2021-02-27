@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+#
+# Ignores any subsequent changes to a file that is already committed to a repo
+
+echo "Ignoring further changes to ${1}"
+
+git update-index --skip-worktree "$1"

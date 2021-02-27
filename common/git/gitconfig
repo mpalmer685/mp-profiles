@@ -1,0 +1,26 @@
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore_global
+
+[alias]
+	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+
+[fetch]
+	# Automatically prune deleted remote branches
+	prune = true
+
+[user]
+	name = Mike Palmer
+	email = mrpalmer685@gmail.com
+
+# Sourcetree
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+# Include local settings
+[include]
+	path = .gitlocal

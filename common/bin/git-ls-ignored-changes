@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+#
+# Lists all files whose changes are being ignored
+# (see also git-ignore-changes)
+
+git ls-files -v | grep ^S | awk '{print $2}'

@@ -1,0 +1,2 @@
+[includeIf "gitdir:~/path/to/repo/"]
+    path = ~/path/to/repo/.gitconfig

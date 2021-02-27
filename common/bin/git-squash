@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#
+# Squash all commits on the current branch to a single commit
+
+first_commit_msg() {
+    local current_branch
+    local first_commit
+
+    current_branch=$(git rev-parse --abbrev-ref HEAD)
+    first_commit=$(git log master.."$current_branch" --pretty="format:%H" | tail -1)
+
+    git log --format=%s%b -n 1 "$first_commit"
+}
+
+msg="$*"
+if [ -z "$msg" ]; then
+    msg=$(first_commit_msg)
+fi
+
+git reset-merge-base
+git add -A
+git commit -m "$msg"
+
+echo "$msg"

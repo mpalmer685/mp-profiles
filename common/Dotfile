@@ -1,0 +1,15 @@
+shell do
+  path_add 'bin'
+  path_add '~/bin'
+
+  source 'functions.sh'
+  source 'alias.sh'
+
+  env EDITOR: 'code --wait'
+end
+
+post_install do
+  symlink 'git/gitconfig'
+
+  mkdir '~/bin'
+end

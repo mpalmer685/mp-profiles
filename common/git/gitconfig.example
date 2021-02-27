@@ -1,0 +1,4 @@
+# Put this in $REPO_BASE/<company name> to use company email address
+[user]
+	name = Mike Palmer
+	email = <company email address>

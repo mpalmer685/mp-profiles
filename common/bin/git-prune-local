@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+#
+# Finds all local branches whose remotes have been deleted and removes them
+
+git branch -vv\
+    | grep ': gone]'\
+    | awk '{print $1}'\
+    | xargs git branch -D
