@@ -1,0 +1,56 @@
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/cask-drivers'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/core'
+
+cask_args appdir: '/Applications'
+
+brew 'bat'
+brew 'gibo'
+brew 'graphviz'
+brew 'grep'
+brew 'lazygit'
+brew 'mackup'
+brew 'mas'
+brew 'n'
+brew 'openssl@1.1'
+brew 'python'
+brew 'shellcheck'
+brew 'thefuck'
+brew 'watchman'
+brew 'yarn'
+brew 'zsh'
+
+# This needs to come after zsh
+brew 'antigen'
+
+cask '1password'
+cask 'appcleaner'
+cask 'firefox'
+cask 'font-jetbrains-mono'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'jetbrains-toolbox'
+cask 'logitech-options'
+cask 'ngrok'
+cask 'rocket'
+cask 'runjs'
+cask 'slack'
+cask 'visual-studio-code'
+
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlstephen'
+cask 'quicklook-json'
+
+mas "Bear", id: 1091189122
+mas "BetterSnapTool", id: 417375580
+mas "Contrast", id: 1254981365
+mas "Divvy", id: 413857545
+mas "Gapplin", id: 768053424
+mas "OmniFocus", id: 867299399
+mas "Reeder", id: 880001334
+mas "SnippetsLab", id: 1006087419
+mas "Xcode", id: 497799835
+mas "Yoink", id: 457622435

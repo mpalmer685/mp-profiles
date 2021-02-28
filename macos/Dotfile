@@ -1,0 +1,86 @@
+shell do
+  path_add '/usr/local/bin/sbin'
+  path_add '/usr/local/sbin'
+
+  source 'alias.sh'
+
+  env N_PRESERVE_NPM: true,
+      REPO_BASE: '$HOME/repos'
+end
+
+post_install do
+  mkdir '~/repos'
+
+  brew_bundle
+  fix_node
+  use_zsh
+
+  exec 'npm install -g tldr' unless command_exists? 'tldr'
+  install_vscode_extensions
+
+  erb 'mackup.cfg.erb'
+  exec 'mackup restore'
+
+  exec_file 'macos-defaults', once: true
+end
+
+# Post-install functions
+
+def fix_node
+  brew_prefix, = exec 'brew --prefix'
+
+  return if symlink? "#{brew_prefix}/Cellar/node"
+
+  info 'Using n for node installation'
+  exec 'n lts'
+  exec 'brew uninstall --ignore-dependencies node'
+  symlink "#{brew_prefix}/n/versions/node", from: "#{brew_prefix}/Cellar/node"
+
+  success 'n is now your node version manager'
+end
+
+def use_zsh
+  zsh_path, = exec 'command -v zsh'
+  user, = exec 'echo "$USER"'
+
+  return unless exec("grep -Fx \"#{zsh_path}\" /etc/shells").out.strip.empty?
+
+  info 'Making zsh your default shell'
+  sudo "bash -c \"echo #{zsh_path} >> /etc/shells\""
+  sudo "chsh -s \"#{zsh_path}\" \"#{user}\""
+
+  success 'zsh is now your default shell'
+end
+
+def install_vscode_extensions
+  return unless command_exists? 'code'
+
+  installed_extensions = exec('code --list-extensions').out.split("\n")
+
+  [
+    'aeschli.vscode-css-formatter',
+    'amad.inspired-by-github',
+    'codezombiech.gitignore',
+    'cssho.vscode-svgviewer',
+    'dbaeumer.vscode-eslint',
+    'DotJoshJohnson.xml',
+    'eamodio.gitlens',
+    'esbenp.prettier-vscode',
+    'fabianlauer.vs-code-xml-format',
+    'jebbs.plantuml',
+    'jmrog.vscode-nuget-package-manager',
+    'k--kato.intellij-idea-keybindings',
+    'Kasik96.swift',
+    'ms-dotnettools.csharp',
+    'ms-python.python',
+    'ms-vscode.powershell',
+    'mushan.vscode-open-iterm2',
+    'rpinski.shebang-snippets',
+    'stpn.vscode-graphql',
+    'timonwong.shellcheck',
+    'Tyriar.sort-lines',
+    'zhouronghui.propertylist'
+  ].each do |id|
+    exec "code --install-extension #{id} --force" unless installed_extensions.include?(id)
+  end
+end
