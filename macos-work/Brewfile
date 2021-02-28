@@ -1,0 +1,13 @@
+tap 'jakehilborn/jakehilborn'
+
+cask_args appdir: '/Applications'
+
+brew 'imagemagick'
+brew 'jakehilborn/jakehilborn/displayplacer'
+
+cask 'bartender'
+cask 'gimp'
+cask 'karabiner-elements'
+cask 'powershell'
+
+mas "Monosnap", id: 540348655

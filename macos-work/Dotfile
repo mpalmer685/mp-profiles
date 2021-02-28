@@ -1,0 +1,7 @@
+shell do
+  source 'functions.sh'
+end
+
+post_install do
+  brew_bundle
+end
