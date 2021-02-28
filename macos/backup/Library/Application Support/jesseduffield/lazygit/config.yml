@@ -1,0 +1,8 @@
+keybinding:
+  universal:
+    prevBlock-alt: '<left>'
+    nextBlock-alt: '<right>'
+    pushFiles: 'p'
+    pullFiles: 'l'
+os:
+  openCommand: 'code -r {{filename}}'

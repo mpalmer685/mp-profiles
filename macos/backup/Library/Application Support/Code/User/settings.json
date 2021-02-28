@@ -1,0 +1,27 @@
+{
+    "workbench.startupEditor": "none",
+    "python.linting.enabled": false,
+    "python.pythonPath": "/usr/local/bin/python3",
+    "window.zoomLevel": 0,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Default Light+",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "diffEditor.renderSideBySide": false,
+    "shellcheck.ignorePatterns": {
+        "**/*.zsh": true,
+        "**/.zshrc": true,
+        "**/completions/_*": true
+    },
+    "shellcheck.customArgs": [
+        "-x"
+    ],
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "files.associations": {
+        "Dotfile": "ruby"
+    }
+}
