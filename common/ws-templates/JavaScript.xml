@@ -1,0 +1,22 @@
+<templateSet group="JavaScript">
+  <template name="impt" value="import PropTypes from 'prop-types'" description="import PropTypes from 'prop-types'" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="impr" value="import React from 'react'" description="import React from 'react'" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="imprpt" value="import React from 'react'&#10;import PropTypes from 'prop-types'" description="Import React and PropTypes" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="impcx" value="import cx from 'classnames'" description="import cx from 'classnames'" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
