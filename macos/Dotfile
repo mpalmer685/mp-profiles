@@ -11,6 +11,9 @@ end
 post_install do
   mkdir '~/repos'
 
+  copy 'Broadcast.itermcolors', '~/Documents/Preferences'
+  info "iTerm color theme has been copied to #{decorate('~/Documents/Preferences', :bold)}"
+
   brew_bundle
   fix_node
   use_zsh

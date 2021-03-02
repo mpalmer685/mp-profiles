@@ -12,4 +12,7 @@ post_install do
   symlink 'git/gitconfig'
 
   mkdir '~/bin'
+
+  copy 'ws-templates', '~/Documents/Preferences/WebStorm'
+  info "Custom WebStorm live templates have been copied to #{decorate('~/Documents/Preferences/WebStorm', :bold)}"
 end
