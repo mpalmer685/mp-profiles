@@ -29,10 +29,13 @@ end
 # Post-install functions
 
 def use_zsh
-  zsh_path, = exec 'command -v zsh'
-  user, = exec 'echo "$USER"'
+  zsh_path = exec 'command -v zsh', silent: true
+  user = exec 'echo "$USER"', silent: true
 
-  return unless exec("grep -Fx \"#{zsh_path}\" /etc/shells").out.strip.empty?
+  unless exec("grep -Fx \"#{zsh_path}\" /etc/shells", silent: true).strip.empty?
+    info 'zsh is your default shell'
+    return
+  end
 
   info 'Making zsh your default shell'
   sudo "bash -c \"echo #{zsh_path} >> /etc/shells\""
@@ -44,7 +47,7 @@ end
 def install_vscode_extensions
   return unless command_exists? 'code'
 
-  installed_extensions = exec('code --list-extensions').out.split("\n")
+  installed_extensions = exec('code --list-extensions', silent: true).split("\n")
 
   [
     'aeschli.vscode-css-formatter',
