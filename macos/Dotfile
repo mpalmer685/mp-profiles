@@ -11,7 +11,7 @@ end
 post_install do
   mkdir '~/repos'
 
-  copy 'Broadcast.itermcolors', '~/Documents/Preferences'
+  copy 'config/Broadcast.itermcolors', '~/Documents/Preferences'
   info "iTerm color theme has been copied to #{decorate('~/Documents/Preferences', :bold)}"
 
   brew_bundle
@@ -21,7 +21,7 @@ post_install do
   exec 'npm install -g tldr' unless command_exists? 'tldr'
   install_vscode_extensions
 
-  erb 'mackup.cfg.erb'
+  erb 'config/mackup.cfg.erb'
   exec 'mackup restore'
 
   exec_file 'macos-defaults', once: true
