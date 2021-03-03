@@ -23,5 +23,14 @@
     "telemetry.enableTelemetry": false,
     "files.associations": {
         "Dotfile": "ruby"
-    }
+    },
+    "grammarly.diagnostics": {
+        "[markdown]": {
+            "ignore": [
+                "code",
+                "inlineCode"
+            ]
+        }
+    },
+    "grammarly.domain": "technical"
 }
