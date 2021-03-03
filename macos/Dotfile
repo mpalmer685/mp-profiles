@@ -21,7 +21,7 @@ post_install do
   install_vscode_extensions
 
   erb 'config/mackup.cfg.erb'
-  exec 'mackup restore'
+  exec 'mackup restore --force'
 
   exec_file 'macos-defaults', once: true
 end
