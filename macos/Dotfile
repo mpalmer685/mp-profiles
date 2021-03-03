@@ -15,7 +15,6 @@ post_install do
   info "iTerm color theme has been copied to #{decorate('~/Documents/Preferences', :bold)}"
 
   brew_bundle
-  fix_node
   use_zsh
 
   exec 'npm install -g tldr' unless command_exists? 'tldr'
@@ -28,19 +27,6 @@ post_install do
 end
 
 # Post-install functions
-
-def fix_node
-  brew_prefix, = exec 'brew --prefix'
-
-  return if symlink? "#{brew_prefix}/Cellar/node"
-
-  info 'Using n for node installation'
-  exec 'n lts'
-  exec 'brew uninstall --ignore-dependencies node'
-  symlink "#{brew_prefix}/n/versions/node", from: "#{brew_prefix}/Cellar/node"
-
-  success 'n is now your node version manager'
-end
 
 def use_zsh
   zsh_path, = exec 'command -v zsh'
