@@ -13,6 +13,9 @@
 	name = Mike Palmer
 	email = mrpalmer685@gmail.com
 
+[diff "plist"]
+	textconv = plutil -convert xml1 -o -
+
 # Sourcetree
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
