@@ -24,13 +24,7 @@
     "files.associations": {
         "Dotfile": "ruby"
     },
-    "grammarly.diagnostics": {
-        "[markdown]": {
-            "ignore": [
-                "code",
-                "inlineCode"
-            ]
-        }
-    },
-    "grammarly.domain": "technical"
+    "languageToolLinter.managed.classPath": "/usr/local/opt/languagetool/libexec/languagetool-server.jar",
+    "languageToolLinter.serviceType": "managed",
+    "languageToolLinter.languageTool.ignoredWordsGlobal": []
 }
