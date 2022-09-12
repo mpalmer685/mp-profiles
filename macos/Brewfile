@@ -2,15 +2,18 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/core'
 
 cask_args appdir: '/Applications'
 
 brew 'bat'
+brew 'coreutils'
 brew 'gibo'
 brew 'graphviz'
 brew 'grep'
 brew 'lazygit'
+brew 'less'
 brew 'mackup'
 brew 'mas'
 brew 'n'
@@ -27,15 +30,19 @@ brew 'antigen'
 
 cask '1password'
 cask 'appcleaner'
+cask 'bartender'
 cask 'firefox'
+cask 'firefox-developer-edition'
 cask 'font-jetbrains-mono'
 cask 'google-chrome'
+cask 'grammarly'
 cask 'iterm2'
 cask 'jetbrains-toolbox'
 cask 'logitech-options'
+cask 'meetingbar'
 cask 'ngrok'
+cask 'omnifocus'
 cask 'rocket'
-cask 'runjs'
 cask 'slack'
 cask 'visual-studio-code'
 
@@ -49,7 +56,6 @@ mas "BetterSnapTool", id: 417375580
 mas "Contrast", id: 1254981365
 mas "Divvy", id: 413857545
 mas "Gapplin", id: 768053424
-mas "OmniFocus", id: 867299399
 mas "Reeder", id: 880001334
 mas "SnippetsLab", id: 1006087419
 mas "Xcode", id: 497799835
