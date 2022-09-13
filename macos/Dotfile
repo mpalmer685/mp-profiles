@@ -54,6 +54,7 @@ def install_vscode_extensions
     'amad.inspired-by-github',
     'codezombiech.gitignore',
     'cssho.vscode-svgviewer',
+    'DavidAnson.vscode-markdownlint',
     'dbaeumer.vscode-eslint',
     'DotJoshJohnson.xml',
     'eamodio.gitlens',
@@ -71,7 +72,8 @@ def install_vscode_extensions
     'stpn.vscode-graphql',
     'timonwong.shellcheck',
     'Tyriar.sort-lines',
-    'zhouronghui.propertylist'
+    'zhouronghui.propertylist',
+    'znck.grammarly'
   ].each do |id|
     exec "code --install-extension #{id} --force" unless installed_extensions.include?(id)
   end
