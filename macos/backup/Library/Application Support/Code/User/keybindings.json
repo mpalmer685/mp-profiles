@@ -29,5 +29,10 @@
         "key": "ctrl+shift+cmd+left",
         "command": "-editor.action.smartSelect.shrink",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "s",
+        "command": "-workbench.action.files.save",
+        "when": "notebookEditorFocused && !inputFocus"
     }
 ]

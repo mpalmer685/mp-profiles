@@ -10,7 +10,7 @@
             <plist version="1.0">
                 <dict>
                     <key>NSPersistenceFrameworkVersion</key>
-                    <integer>1044</integer>
+                    <integer>1048</integer>
                     <key>NSStoreModelVersionHashes</key>
                     <dict>
                         <key>BSTCDisplay</key>
@@ -141,14 +141,14 @@
         <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
     </object>
     <object type="BSTCDISPLAY" id="z109">
-        <attribute name="vendor" type="int32">22842</attribute>
+        <attribute name="vendor" type="int32">1970170734</attribute>
         <attribute name="serialnumber" type="string">0</attribute>
         <attribute name="screensize" type="string">{1219.1999816894531, 685.79998970031738}</attribute>
         <attribute name="screenframe" type="string">{{0, 0}, {1920, 1080}}</attribute>
         <attribute name="resolution" type="string">{1920, 1080}</attribute>
-        <attribute name="model" type="int32">8195</attribute>
+        <attribute name="model" type="int32">1986622068</attribute>
         <attribute name="maindisplay" type="int32">1</attribute>
-        <attribute name="displayid" type="int32">1317535945</attribute>
+        <attribute name="displayid" type="int32">5</attribute>
         <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">79CF3D17-9486-4AA4-91F5-D57507CA9248</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
@@ -225,15 +225,15 @@
         <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
     </object>
     <object type="BSTCDISPLAY" id="z116">
-        <attribute name="vendor" type="int32">1970170734</attribute>
+        <attribute name="vendor" type="int32">2513</attribute>
         <attribute name="serialnumber" type="string">0</attribute>
         <attribute name="screensize" type="string">{1204.1481300636574, 677.33332316080737}</attribute>
         <attribute name="screenframe" type="string">{{0, 0}, {3840, 2160}}</attribute>
         <attribute name="resolution" type="string">{3840, 2160}</attribute>
-        <attribute name="model" type="int32">1986622068</attribute>
+        <attribute name="model" type="int32">31060</attribute>
         <attribute name="maindisplay" type="int32">1</attribute>
-        <attribute name="displayid" type="int32">1104977161</attribute>
-        <attribute name="builtin" type="bool">1</attribute>
+        <attribute name="displayid" type="int32">1</attribute>
+        <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">E922CCF5-7065-454B-A0D2-84B99A8D720E</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
         <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
@@ -354,11 +354,11 @@
         <attribute name="vendor" type="int32">2513</attribute>
         <attribute name="serialnumber" type="string">21573</attribute>
         <attribute name="screensize" type="string">{706.78259808084238, 397.56521142047387}</attribute>
-        <attribute name="screenframe" type="string">{{1440, -184}, {3840, 2160}}</attribute>
+        <attribute name="screenframe" type="string">{{0, 0}, {3840, 2160}}</attribute>
         <attribute name="resolution" type="string">{3840, 2160}</attribute>
         <attribute name="model" type="int32">31060</attribute>
-        <attribute name="maindisplay" type="int32">0</attribute>
-        <attribute name="displayid" type="int32">1952317765</attribute>
+        <attribute name="maindisplay" type="int32">1</attribute>
+        <attribute name="displayid" type="int32">1</attribute>
         <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">671F1FD6-9CF4-4BD8-B1C7-D10E8C086418</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>

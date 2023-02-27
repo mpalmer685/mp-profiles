@@ -26,5 +26,18 @@
     },
     "languageToolLinter.managed.classPath": "/usr/local/opt/languagetool/libexec/languagetool-server.jar",
     "languageToolLinter.serviceType": "managed",
-    "languageToolLinter.languageTool.ignoredWordsGlobal": []
+    "languageToolLinter.languageTool.ignoredWordsGlobal": [],
+    "workbench.editor.untitled.hint": "hidden",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.largeFileOptimizations": false,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    }
 }
