@@ -30,3 +30,6 @@ AGKOZAK_CUSTOM_SYMBOLS=(
   '%F{green}S%f'    # Stashed
 )
 AGKOZAK_CUSTOM_RPROMPT='%(3V.%F{yellow}(%6v%f%(7V. ${psvar[7]}.)%F{yellow}%)%f.)'
+
+# Better contrast for zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=246"
