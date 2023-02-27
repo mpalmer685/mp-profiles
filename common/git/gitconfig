@@ -16,13 +16,26 @@
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
 
-# Sourcetree
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+# diff and merge with Sourcetree
+# [difftool "sourcetree"]
+# 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+# 	path = 
+# [mergetool "sourcetree"]
+# 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+# 	trustExitCode = true
+
+# diff and merge with VS Code
+[merge]
+	tool =  vscode
+[mergetool]
+	keepBackup = false
+[mergetool "vscode"]
+	cmd = code --wait --new-window $MERGED
+
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff --new-window $LOCAL $REMOTE
 
 # Include local settings
 [include]
