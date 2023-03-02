@@ -40,3 +40,5 @@
 # Include local settings
 [include]
 	path = .gitlocal
+[init]
+	defaultBranch = main

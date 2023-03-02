@@ -31,6 +31,11 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "cmd+s",
+        "command": "workbench.action.files.save",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
         "key": "s",
         "command": "-workbench.action.files.save",
         "when": "notebookEditorFocused && !inputFocus"

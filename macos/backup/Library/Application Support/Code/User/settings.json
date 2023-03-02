@@ -1,43 +1,58 @@
 {
-    "workbench.startupEditor": "none",
-    "python.linting.enabled": false,
-    "python.pythonPath": "/usr/local/bin/python3",
-    "window.zoomLevel": 0,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "workbench.colorTheme": "Default Light+",
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "diffEditor.renderSideBySide": false,
-    "shellcheck.ignorePatterns": {
-        "**/*.zsh": true,
-        "**/.zshrc": true,
-        "**/completions/_*": true
-    },
-    "shellcheck.customArgs": [
-        "-x"
-    ],
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "files.associations": {
-        "Dotfile": "ruby"
-    },
-    "languageToolLinter.managed.classPath": "/usr/local/opt/languagetool/libexec/languagetool-server.jar",
-    "languageToolLinter.serviceType": "managed",
-    "languageToolLinter.languageTool.ignoredWordsGlobal": [],
-    "workbench.editor.untitled.hint": "hidden",
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "security.workspace.trust.untrustedFiles": "open",
-    "editor.largeFileOptimizations": false,
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": true,
-        "plaintext": true,
-        "markdown": true
-    }
+  "workbench.startupEditor": "none",
+  "python.linting.enabled": false,
+  "python.pythonPath": "/usr/local/bin/python3",
+  "window.zoomLevel": 0,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Default Light+",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "diffEditor.renderSideBySide": false,
+  "shellcheck.ignorePatterns": {
+    "**/*.zsh": true,
+    "**/.zshrc": true,
+    "**/completions/_*": true
+  },
+  "shellcheck.customArgs": ["-x"],
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false,
+  "files.associations": {
+    "Dotfile": "ruby"
+  },
+  "languageToolLinter.managed.classPath": "/usr/local/opt/languagetool/libexec/languagetool-server.jar",
+  "languageToolLinter.serviceType": "managed",
+  "languageToolLinter.languageTool.ignoredWordsGlobal": [],
+  "languageToolLinter.languageTool.language": "en-US",
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.mdx",
+    "**/*.md"
+  ],
+  "lldb.library": "/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.framework/Versions/A/LLDB",
+  "swiftformat.path": ["swiftformat"],
+  "editor.formatOnSave": true,
+  "cSpell.userWords": [
+    "adjacents",
+    "Pathfinding",
+    "signum",
+    "swiftlint"
+  ],
+  "workbench.editor.untitled.hint": "hidden",
+  "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.largeFileOptimizations": false,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+      "*": true,
+      "yaml": true,
+      "plaintext": true,
+      "markdown": true
+  },
 }
